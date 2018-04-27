@@ -60,7 +60,7 @@
         (function(){
             var animationItem = document.getElementById('animationItem');
             var btn = document.getElementById('btn')
-            btn.addEventListener("click",()=>{
+            btn.addEventListener("click",function(){
                 var classNameArr = animationItem.className.split(' ');
                 var index = classNameArr.indexOf('changed')
                 if(index===1){
