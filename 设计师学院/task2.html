@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>task2:transfor 2D变形</title>
+    <style>
+        html{
+            padding: 0;
+            margin:0;
+            border:0;
+        }
+        .box{
+            border:2px solid #ebebeb;
+            background:#f7f6f6;
+            height:68px;
+            width:60px;
+            margin:30px auto auto 30px;
+            float:left;
+            text-align: center;
+        }
+        .box1{
+            /*定义沿着X轴的2D倾斜转换*/
+            transform:skewX(30deg);
+            -ms-transform:skewX(30deg); 	/* IE 9 */
+            -moz-transform:skewX(30deg); 	/* Firefox */
+            -webkit-transform:skewX(30deg); /* Safari 和 Chrome */
+            -o-transform:skewX(30deg); 	/* Opera */
+        }
+        .box2{
+            /*通过设置X轴的值来定义缩放转换*/
+            transform: scaleX(0.5);  /*X轴压缩为0.5*/
+            -ms-transform:scaleX(0.5);	
+            -moz-transform:scaleX(0.5);	
+            -webkit-transform:scaleX(0.5);
+            -o-transform:scaleX(0.5);
+        }
+        .box3{
+            /*定义 2D 旋转，在参数中规定角度。*/
+            transform:rotate(45deg);/*旋转45°*/
+            -ms-transform:rotate(45deg);	
+            -moz-transform:rotate(45deg);	
+            -webkit-transform:rotate(45deg);
+            -o-transform:rotate(45deg);
+        }
+        .box4{
+            /*定义2D位移转换*/
+            transform:translate(10px,20px);/*X轴位移10px，Y轴位移20px*/
+            -ms-transform:translate(10px,20px);	
+            -moz-transform:translate(10px,20px);	
+            -webkit-transform:translate(10px,20px);
+            -o-transform:translate(10px,20px);
+        }
+        .box5{
+            transform:skewX(30deg) scaleX(0.5) rotate(45deg) translate(10px,20px);
+            -ms-transform:skewX(30deg) scaleX(0.5) rotate(45deg) translate(10px,20px);	
+            -moz-transform:skewX(30deg) scaleX(0.5) rotate(45deg) translate(10px,20px);	
+            -webkit-transform:skewX(30deg) scaleX(0.5) rotate(45deg) translate(10px,20px);
+            -o-transform:skewX(30deg) scaleX(0.5) rotate(45deg) translate(10px,20px);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box0 box">box0</div>
+    <div class="box1 box">box1</div>
+    <div class="box2 box">box2</div>
+    <div class="box3 box">box3</div>
+    <div class="box4 box">box4</div>
+    <div class="box5 box">box5</div>
+</body>
+</html>
+<!--
+
+    浏览器兼容：
+    Internet Explorer 10、Firefox、Opera 支持 transform 属性。
+    Internet Explorer 9 支持替代的 -ms-transform 属性（仅适用于 2D 转换）。
+    Safari 和 Chrome 支持替代的 -webkit-transform 属性（3D 和 2D 转换）。
+    Opera 只支持 2D 转换。
+
+    transform 各项子属性：
+    none	定义不进行转换。	
+    matrix(n,n,n,n,n,n)	定义 2D 转换，使用六个值的矩阵。	
+    matrix3d(n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n)	定义 3D 转换，使用 16 个值的 4x4 矩阵。	
+    translate(x,y)	定义 2D 转换。	
+    translate3d(x,y,z)	定义 3D 转换。	
+    translateX(x)	定义转换，只是用 X 轴的值。	
+    translateY(y)	定义转换，只是用 Y 轴的值。	
+    translateZ(z)	定义 3D 转换，只是用 Z 轴的值。	
+    scale(x,y)	定义 2D 缩放转换。	
+    scale3d(x,y,z)	定义 3D 缩放转换。	
+    scaleX(x)	通过设置 X 轴的值来定义缩放转换。	
+    scaleY(y)	通过设置 Y 轴的值来定义缩放转换。	
+    scaleZ(z)	通过设置 Z 轴的值来定义 3D 缩放转换。	
+    rotate(angle)	定义 2D 旋转，在参数中规定角度。	
+    rotate3d(x,y,z,angle)	定义 3D 旋转。	
+    rotateX(angle)	定义沿着 X 轴的 3D 旋转。	
+    rotateY(angle)	定义沿着 Y 轴的 3D 旋转。	
+    rotateZ(angle)	定义沿着 Z 轴的 3D 旋转。	
+    skew(x-angle,y-angle)	定义沿着 X 和 Y 轴的 2D 倾斜转换。	
+    skewX(angle)	定义沿着 X 轴的 2D 倾斜转换。	
+    skewY(angle)	定义沿着 Y 轴的 2D 倾斜转换。	
+    perspective(n)	为 3D 转换元素定义透视视图。	
+
+
+-->
